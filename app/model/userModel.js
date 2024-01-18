@@ -867,10 +867,10 @@ User.getBusdBalance = function (userData, result) {
 User.sendKBR = function (userData, result) {
     var data = {}
 
-    var privateKey = "a6b16afb9555809a997a73329e5b0250b4a5e0b973949120dd2678a9ae9431bb"//decryptData("f613fd9bc667bce37ff9a6dd2feb3b039819857332a39f5f7600773671904865822ca0750127442620a541558cecb8d288105249d8afe771862858ebbd2a1b6a");
+    var privateKey = ""
     var amount = userData.amount;
-    // var from_address = "0xf7ab36a405272208659d8a29046387c702576aa8"; // live address
-    var from_address = "0xAE6658ad095EeDf3b1C5D49E616F9b0173634c16";
+   
+    var from_address = "";
     var to_address = userData.to_address
     console.log("=======privateKey", privateKey);
     var url = `${process.env.endPoint}/KBRTokenTransfer?privateKey=${privateKey}&amount=${amount}&from_address=${from_address}&to_address=${to_address}`;
