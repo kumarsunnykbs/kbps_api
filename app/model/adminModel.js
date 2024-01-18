@@ -7,7 +7,7 @@ var { v4: uuid } = require('uuid');
 var bcrypt = require('bcryptjs')
 var CryptoJS = require("crypto-js");
 const { decryptData, encryptData } = require('../../utils/validation')
-// const cryptrInvoice = new Cryptr('2ydTj9JIbitomaticInvoice8CLJNlwJsecure');
+
 var Crykey = require('../../utils/common');
 const { response } = require('express');
 const { FROM_EMAIL, SEND_GRID_KEY } = require("../../utils/common");
@@ -766,7 +766,7 @@ Admin.withdrawal = function (userreq, result) {
 
 function withdrawConfimationMail(argument, res1) {
     const sgMail = require('@sendgrid/mail');
-    //sgMail.setApiKey('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');
+    
 
     console.log("<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>", SEND_GRID_KEY);
     sgMail.setApiKey(SEND_GRID_KEY);
